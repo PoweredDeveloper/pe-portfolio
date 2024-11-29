@@ -9,8 +9,8 @@ export default function Home() {
     return (
         <>
           <div className='border-b-[1px] border-b-zinc-800 px-4 pb-4 flex flex-col gap-2 border-dotted lg:border-0'>
-            <h3 className={`${font_unbounded.className} text-2xl mb-3`}>Давайте Познакомимся</h3>
-            <span className='text-bleak'>О учительской жизни и тому как живу. Что происходит. Об опыте и работе. Все вместе ваще плюс вайб</span>
+            <h3 className={`${font_unbounded.className} text-2xl mb-3`}>Давайте познакомимся</h3>
+            <span className='text-bleak'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad numquam perferendis porro cupiditate minima fugiat dicta ullam esse voluptatibus excepturi asperiores iusto mollitia neque, cu.</span>
             <Link href='/#about' className='flex gap-3 text-lg font-bold items-center underline my-3 text-accent'>Посмотреть <FaArrowRight /></Link>
           </div>
           <div className='px-4 flex flex-col gap-2'>
