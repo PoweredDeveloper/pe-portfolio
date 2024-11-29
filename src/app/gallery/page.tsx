@@ -22,7 +22,7 @@ export default function Gallery() {
   arr.forEach((filename: string | Buffer, index: number) => {
       if (typeof filename != "string") return
 
-      const category = filename.split('\\')[0]
+      const category = filename.split('/')[0]
       if (current_category != category || arr.length == index + 1) {
       images.push({
           name: current_category,
@@ -31,7 +31,7 @@ export default function Gallery() {
       files = []
       current_category = category
       }
-      files.push(`${filename.split('\\')[0]}/${filename.split('\\')[1]}`)
+      files.push(`${filename.split('/')[0]}/${filename.split('/')[1]}`)
   })
   images.shift()
 
