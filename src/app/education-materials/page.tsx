@@ -8,10 +8,6 @@ type File = {
   file_path: string
 }
 
-type Props = {
-  files: File[],
-}
-
 const getArrayOfImagesIn = (folder: string) => {
   return fs.readdirSync(path.join(process.cwd(), 'public', folder), { recursive: true }).filter(value => value.includes('.'))
 }
@@ -20,7 +16,7 @@ export default function Achievements() {
   const files: File[] = []
   const arr = getArrayOfImagesIn('materials')
 
-  arr.forEach((filename: string | Buffer, index: number) => {
+  arr.forEach((filename: string | Buffer) => {
       if (typeof filename != "string") return
 
       const filename_title = filename.split('.')[0]
