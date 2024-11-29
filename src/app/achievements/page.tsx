@@ -1,11 +1,43 @@
-import React from 'react';
+import React from 'react'
+import path from 'path'
+import Slider from './Slider'
+import fs from 'fs'
 
-const Page = () => {
-    return (
-        <main className='flex-auto px-0 md:px-8 w-full'>
-          Achieve
-        </main>
-    );
+type Group = {
+  name: string,
+  paths: string[]
 }
 
-export default Page;
+const getArrayOfImagesIn = (folder: string) => {
+  return fs.readdirSync(path.join(process.cwd(), 'public', folder), { recursive: true }).filter(value => value.includes('.'))
+}
+
+export default function Achievements() {
+  const images: Group[] = []
+  const arr = getArrayOfImagesIn('achievements')
+
+  let current_category = ""
+  let files: string[] = []
+
+  arr.forEach((filename: string | Buffer, index: number) => {
+      if (typeof filename != "string") return
+
+      const category = filename.split('/')[0]
+      if (current_category != category || arr.length == index + 1) {
+      images.push({
+          name: current_category,
+          paths: files
+      })
+      files = []
+      current_category = category
+      }
+      files.push(`${filename.split('/')[0]}/${filename.split('/')[1]}`)
+  })
+  images.shift()
+
+  return (
+    <>
+      <Slider images={images} />
+    </>
+  )
+}

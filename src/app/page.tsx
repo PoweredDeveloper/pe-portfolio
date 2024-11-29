@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import { Unbounded } from 'next/font/google'
 
+import { FaArrowRight } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 import photo from '@/assets/photo2.jpg'
@@ -34,6 +35,7 @@ export default function Home() {
       <div className='flex-auto px-16 lg:px-32 w-full bg-cyan-700 py-10 text-background'>
         <h2 className={`${font_unbounded.className} text-2xl mb-8`} >О Сайте</h2>
         <span className='text-justify'>На этом сайте собраны материалы к урокам физкультуры и внеклассной деятельности учителя.</span>
+        <Link href='/education-materials' className='flex gap-3 text-lg font-bold items-center underline mt-3 text-background'>Изучить <FaArrowRight /></Link>
       </div>
     </main>
   );

@@ -45,9 +45,9 @@ export default function Slider({ images }: Props) {
             {category.paths.map((path, key) => (
               <Image
                 key={key}
-                onClick={() => previewImage(`/gallery/${path}`)}
+                onClick={() => previewImage(`/achievements/${path}`)}
                 className='cursor-pointer rounded-md bg-bleak w-full lg:h-[150px] lg:w-fit'
-                src={`/gallery/${path}`}
+                src={`/achievements/${path}`}
                 alt={`${category.name} - photo`}
                 width={300}
                 height={150}
