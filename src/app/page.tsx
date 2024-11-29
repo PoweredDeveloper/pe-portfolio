@@ -1,15 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Unbounded, Roboto_Slab } from 'next/font/google'
+import { Unbounded } from 'next/font/google'
 
 import { IoMdArrowDropdown } from "react-icons/io";
 
-import Links from '@/components/Links'
 import photo from '@/assets/photo2.jpg'
 
 const font_unbounded = Unbounded({ weight: ['800'], subsets: ['cyrillic'] })
-const font_roboto = Roboto_Slab({ weight: ['400'], subsets: ['cyrillic'] })
 
 export default function Home() {
   return (
@@ -18,7 +16,7 @@ export default function Home() {
         <div className='flex gap-8 flex-col max-w-min'>
           <div className='w-[75px] h-[6px] bg-foreground' />
           <h1 className={`${font_unbounded.className} text-3xl md:text-3xl lg:text-5xl leading-tight`}>Приказчикова <span className='underline text-accent'>Татьяна Викторовна</span> учитель физкультуры</h1>
-          <span className='text-sm md:text-lg text-bleak'>Учитель физической культуры<br />МБОУ "Гимназия №122 имени Ж. А. Зайцевой"<br />г. Казани Республики Татарстан</span>
+          <span className='text-sm md:text-lg text-bleak'>Учитель физической культуры<br />МБОУ &quot;Гимназия №122 имени Ж. А. Зайцевой&quot;<br />г. Казани Республики Татарстан</span>
           <Link href='#about' className={`mt-8 p-2 rounded-full bg-accent flex gap-2 items-center justify-start max-w-min text-background ${font_unbounded.className}`}>
             <IoMdArrowDropdown className='text-4xl' />
             <span className='text-xl mr-3'>Начать</span>
@@ -29,7 +27,7 @@ export default function Home() {
       <div className='flex-auto px-0 md:px-16 lg:px-32 w-full' id='about'>
         <h2 className={`${font_unbounded.className} text-2xl mb-8`} >Обо мне</h2>
         <div className='flex gap-5 flex-col md:flex-row w-full'>
-          <span className='text-justify'>Я <strong>Приказчикова Татьяна Викторовна</strong>, учитель физической культуры "Гимназии №122". Работаю в Гимназии начиная с <i>2000-го</i> года. Являюсь учителем высшей категории. Люблю свою работу, детей, спорт. Сама увлекаюсь спортом и веду спортивный образ жизни. На данный момент я классный руководитель <i>11А</i> класса.</span>
+          <span className='text-justify'>Я <strong>Приказчикова Татьяна Викторовна</strong>, учитель физической культуры &quot;Гимназии №122&quot;. Работаю в Гимназии начиная с <i>2000-го</i> года. Являюсь учителем высшей категории. Люблю свою работу, детей, спорт. Сама увлекаюсь спортом и веду спортивный образ жизни. На данный момент я классный руководитель <i>11А</i> класса.</span>
           <Image src={photo} alt='Photo' className='rounded-xl w-full md:w-[30vh]' />
         </div>
       </div>

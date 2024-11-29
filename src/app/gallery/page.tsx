@@ -14,7 +14,7 @@ const getArrayOfImagesIn = (folder: string) => {
 
 export default function Gallery() {
   const images: Group[] = []
-  let arr = getArrayOfImagesIn('gallery')
+  const arr = getArrayOfImagesIn('gallery')
 
   let current_category = ""
   let files: string[] = []
@@ -22,7 +22,7 @@ export default function Gallery() {
   arr.forEach((filename: string | Buffer, index: number) => {
       if (filename instanceof Buffer) return
 
-      let category = filename.split('\\')[0]
+      const category = filename.split('\\')[0]
       if (current_category != category || arr.length == index + 1) {
       images.push({
           name: current_category,
