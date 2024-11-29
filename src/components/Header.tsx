@@ -23,7 +23,7 @@ const headerLinks: HeaderLinkType[] = [
         link: '/'
     },
     {
-        title: "Галлерея",
+        title: "Галерея",
         link: '/gallery'
     },
     {
