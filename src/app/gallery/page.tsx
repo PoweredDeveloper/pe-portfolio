@@ -20,7 +20,7 @@ export default function Gallery() {
   let files: string[] = []
 
   arr.forEach((filename: string | Buffer, index: number) => {
-      if (filename instanceof Buffer) return
+      if (typeof filename != "string") return
 
       const category = filename.split('\\')[0]
       if (current_category != category || arr.length == index + 1) {
