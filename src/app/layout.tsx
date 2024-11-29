@@ -6,8 +6,8 @@ import Links from '@/components/Links'
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Приказчикова Татьяна Викторовная | Портфолио",
-  description: "Портфолио Приказчикова Татьяна Викторовная, ",
+  title: "Приказчикова Татьяна Викторовна | Портфолио",
+  description: "Портфолио - Приказчикова Татьяна Викторовна.",
 };
 
 const font_roboto = Roboto_Slab({ weight: ['400'], subsets: ['cyrillic'] })
