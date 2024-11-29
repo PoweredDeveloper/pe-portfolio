@@ -34,6 +34,7 @@ export default function Gallery() {
       files.push(`${filename.split('/')[0]}/${filename.split('/')[1]}`)
   })
   images.shift()
+  images.pop()
 
   return (
     <>
