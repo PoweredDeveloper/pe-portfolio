@@ -26,14 +26,14 @@ export default function Home() {
         <div className='min-w-[80vw] rounded-3xl bg-cover md:rounded-none md:rounded-tl-[90px] md:max-h-[80vh] md:min-w-[40vh] md:aspect-[1/3] lg:bg-cover lg:bg-center md:bg-top md:self-end lg:self-center flex-auto max-w-[70vh] max-h-[70h] aspect-square lg:aspect-square circle overflow-hidden -z-10 lg:rounded-full' />
       </div>
       <div className='flex-auto px-16 lg:px-32 w-full' id='about'>
-        <h2 className={`${font_unbounded.className} text-2xl mb-8`} >Давайте Познакомимся</h2>
+        <h2 className={`${font_unbounded.className} text-2xl mb-8`} >Давайте познакомимся</h2>
         <div className='flex gap-5 flex-col md:flex-row w-full'>
-          <span className='text-justify'>Я <strong>Приказчикова Татьяна Викторовна</strong> - учитель физической культуры &quot;Гимназии №122&quot;. Работаю в Гимназии, начиная с <i>2000-го</i> года. Являюсь учителем высшей категории. Люблю свою работу, детей, спорт. Сама увлекаюсь спортом и веду спортивный образ жизни. На данный момент я классный руководитель <i>11А</i> класса.</span>
+          <span className='text-justify'>Я <strong>Приказчикова Татьяна Викторовна</strong> - учитель физической культуры &quot;Гимназии №122&quot;. Работаю в Гимназии, начиная с <i>2000-го</i> года. Являюсь учителем высшей категории. Люблю свою работу, детей, спорт. Сама увлекаюсь спортом и веду спортивный образ жизни. На данный момент являясь классным руководителем <i>11А</i> класса.</span>
           <Image src={photo} alt='Photo' className='rounded-xl w-full md:w-[30vh]' />
         </div>
       </div>
       <div className='flex-auto px-16 lg:px-32 w-full bg-cyan-700 py-10 text-background'>
-        <h2 className={`${font_unbounded.className} text-2xl mb-8`} >О Сайте</h2>
+        <h2 className={`${font_unbounded.className} text-2xl mb-8`} >О сайте</h2>
         <span className='text-justify'>На этом сайте собраны материалы к урокам физкультуры и внеклассной деятельности учителя.</span>
         <Link href='/education-materials' className='flex gap-3 text-lg font-bold items-center underline mt-3 text-background'>Изучить <FaArrowRight /></Link>
       </div>

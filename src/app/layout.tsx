@@ -25,7 +25,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <footer className="mt-8 flex flex-col items-center justify-evenly lg:flex-row gap-6 p-16 lg:px-32 lg:py-16 border-t-[1px] flex-none">
+        <footer className="mt-8 flex flex-col items-center lg:items-start justify-evenly lg:flex-row gap-6 p-16 lg:px-32 lg:py-16 border-t-[1px] flex-none">
           <Links />
         </footer>
       </body>
