@@ -37,16 +37,13 @@ export default function Slider({ images }: Props) {
     <main className='pt-0 px-5 lg:pt-5 md:px-16 lg:px-32'>
       {images.map(((category: Group, index: number) => (
         <div key={index} className='mt-0 lg:mt-10'>
-          <h1 className={`${font_unbounded.className} text-2xl flex gap-3`}>
-            <span className='text-accent'>{index + 1}.</span>
-            <span>{category.name}:</span>
-          </h1>
+          <h1 className={`${font_unbounded.className} text-2xl flex gap-3`}>{category.name}:</h1>
           <div className='flex flex-wrap items-center lg:items-start flex-col lg:flex-row gap-3 my-4'>
             {category.paths.map((path, key) => (
               <Image
                 key={key}
                 onClick={() => previewImage(`/achievements/${path}`)}
-                className='cursor-pointer rounded-md bg-bleak w-full lg:h-[150px] lg:w-fit'
+                className='cursor-pointer rounded-md bg-bleak w-full lg:h-[250px] lg:w-fit'
                 src={`/achievements/${path}`}
                 alt={`${category.name} - photo`}
                 width={300}
