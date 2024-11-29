@@ -5,17 +5,43 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bleakfont: #636363;
+  --accent: #0e7490;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+@layer components {
+  .circle {
+    background-image: url('../assets/photo.jpg');
+    background-clip: border-box;
+    background-size: auto;
+  }
+
+  .underline-btn {
+    @apply relative cursor-pointer;
+  }
+
+  .underline-btn:after {
+    @apply absolute w-[105%] left-[-2.5%] bg-[#444444] scale-x-0 rounded-full transition-colors;
+    content: '';
+    height: 3px;
+    bottom: -5px;
+    transform-origin: bottom right;
+    transition-property: transform, background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .underline-btn:hover:after {
+    @apply scale-x-[1] cursor-pointer bg-foreground origin-bottom-left;
+  }
 }
