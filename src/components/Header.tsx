@@ -46,7 +46,7 @@ export default function Header() {
                 <Link href='/' className='hover:cursor-pointer text-3xl' ><LuMedal /></Link>
                 <ul className='hidden gap-12 lg:flex items-center'>
                     {headerLinks.map((link: HeaderLinkType, index: number) => (
-                        <li key={index} className={`underline-btn text-xl text-foreground font-semibold no-underline transition-colors ${link.link == pathname ? "after:scale-x-[1] origin-bottom-left" : ""}`}>
+                        <li onClick={() => setMobileMenuOpen(false)} key={index} className={`underline-btn text-xl text-foreground font-semibold no-underline transition-colors ${link.link == pathname ? "after:scale-x-[1] origin-bottom-left" : ""}`}>
                             <Link href={link.link}>{link.title}</Link>
                         </li>
                     ))}
@@ -75,7 +75,7 @@ export default function Header() {
                     <div className='flow-root'>
                         <div className='flex flex-col gap-5 mx-8 py-8 border-b-[1px] border-b-foreground'>
                             {headerLinks.map((link: HeaderLinkType, index: number) => (
-                                <div className='flex items-center gap-2' key={index}>
+                                <div onClick={() => setMobileMenuOpen(false)} className='flex items-center gap-2' key={index}>
                                     <Link href={link.link} className={`text-foreground font-semibold text-xl ${link.link == pathname && 'underline'}`}>{link.title.toUpperCase()}</Link>
                                 </div>
                             ))}
