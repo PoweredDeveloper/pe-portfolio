@@ -12,7 +12,7 @@ const getArrayOfImagesIn = (folder: string) => {
   return fs.readdirSync(path.join(process.cwd(), 'public', folder), { recursive: true }).filter(value => value.includes('.'))
 }
 
-const separator: string = '\\'
+const separator: string = '/'
 
 export default function Gallery() {
   const images: Group[] = []
