@@ -15,7 +15,7 @@ export default function Home() {
           </div>
           <div className='px-4 flex flex-col gap-2'>
             <h3 className={`${font_unbounded.className} text-2xl mb-3`}>Достижения</h3>
-            <span className='text-bleak'>Призер грантового конкурса лучших проектов для детей и молодежи «Конкурс первичных отделений Движения Первых», 2024. Призер зонального этапа Республиканской военно-спортивной игры «Зарница - 2023». Призер Школьной волейбольной Лиги, 2023 - 2024</span>
+            <span className='text-bleak'>Призер грантового конкурса лучших проектов для детей и молодежи «Конкурс первичных отделений Движения Первых», 2024; Призер зонального этапа Республиканской военно-спортивной игры «Зарница - 2023»; Призер Школьной волейбольной Лиги, 2023 - 2024.</span>
             <Link href='/achievements' className='flex gap-3 text-lg font-bold items-center underline mt-3 text-accent'>Посмотреть <FaArrowRight /></Link>
           </div>
         </>
