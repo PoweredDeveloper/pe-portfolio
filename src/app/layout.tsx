@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from 'next/link'
 import { Roboto_Slab } from 'next/font/google'
 
 import Header from '@/components/Header'
@@ -28,6 +29,7 @@ export default function RootLayout({
         <footer className="mt-8 flex flex-col items-center lg:items-start justify-evenly lg:flex-row gap-6 p-16 lg:px-32 lg:py-16 border-t-[1px] flex-none">
           <Links />
         </footer>
+        <span className="text-foreground w-full flex justify-center items-center mb-4 gap-1">Maded by: <Link className="text-accent underline italic" href='https://github.com/PoweredDeveloper'>PoweredDeveloper</Link></span>
       </body>
     </html>
   );
